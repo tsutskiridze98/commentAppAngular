@@ -1,0 +1,147 @@
+.com-div {
+    height: 100%;
+    width: 100%;
+    .comment {
+        width: 100%;
+        height: auto;
+        background-color: var(--white);
+        border-radius: .5rem;
+        padding: 1rem 1rem 1rem 0;
+    
+        display: flex;
+        flex-direction: row;
+    
+        &-left {
+            width: 5rem;
+            height: 100%;
+    
+            &-review {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0 auto;
+                border-radius: 10px;
+                background-color: var(--light-gray);
+    
+                button {
+                    border: none;
+                    background-color: transparent;
+                    padding: 10px 0;
+                    cursor: pointer;
+                    filter: invert(80%) sepia(7%) saturate(1224%) hue-rotate(201deg) brightness(102%) contrast(87%);
+                    transition: .3s;
+    
+                    &:hover {
+                        filter: invert(32%) sepia(95%) saturate(668%) hue-rotate(207deg) brightness(85%) contrast(86%);
+                    }
+                }
+    
+                p {
+                    font-weight: 500;
+                    color: var(--moderate-blue);
+                }
+            }
+        }
+    
+        &-right {
+            width: 100%;
+            height: 100%;
+            color: var(--grayish-blue);
+    
+            display: flex;
+            flex-direction: column;
+            row-gap: 1rem;
+    
+            &-top {
+                height: 3rem;
+                width: 100%;
+    
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+    
+                &-user {
+                    width: 60%;
+                    height: 100%;
+    
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    column-gap: 1rem;
+    
+                    .comment-user-img {
+                        height: 100%;
+                        img {
+                            height: 100%;
+                        }
+                    }
+    
+                    .comment-username {
+                        p {
+                            font-weight: 700;
+                            color: var(--dark-blue);
+                        }
+                    }
+                }
+    
+                &-reply {
+                    width: 20%;
+                    height: 100%;
+                    
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+    
+                    button {
+                        background-color: transparent;
+                        cursor: pointer;
+                        border: none;
+                        position: relative;
+    
+                        font-size: 1rem;
+                        font-weight: 700;
+                        color: var(--moderate-blue);
+                        transition: .3s;
+    
+                        &::before {
+                            content: url(/assets/images/icon-reply.svg);
+                            position: absolute;
+                            right: 3rem;
+                            transition: .3s;
+                            filter: invert(32%) sepia(95%) saturate(668%) hue-rotate(207deg) brightness(85%) contrast(86%);
+                        }
+    
+                        &:hover{
+                            color: var(--light-grayish-blue);
+                        }
+    
+                        &:hover::before {
+                            filter: invert(80%) sepia(7%) saturate(1224%) hue-rotate(201deg) brightness(102%) contrast(87%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .for-reply {
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+
+        .line {
+            width: 5px;
+            align-items: stretch;
+            background-color: var(--light-gray);
+            margin: 0 2rem;
+        }
+
+        app-reply {
+            display: flex;
+            flex-direction: column;
+            row-gap: 1rem;
+        }
+    }
+}
+
+

@@ -1,0 +1,30 @@
+<div class="comment" *ngFor="let reply of replies">
+    <div class="comment-left">
+        <div class="comment-left-review">
+            <button><img src="/assets/images/icon-plus.svg" alt="plus"></button>
+            <p>{{ reply.score }}</p>
+            <button><img src="/assets/images/icon-minus.svg" alt="minus"></button>
+        </div>
+    </div>
+    <div class="comment-right">
+        <div class="comment-right-top">
+            <div class="comment-right-top-user">
+                <div class="comment-user-img">
+                    <img src="assets/{{reply.user.image.png}}" alt="User Avatar">
+                </div>
+                <div class="comment-username">
+                    <p>{{ reply.user.username }}</p>
+                </div>
+                <div class="comment-date">
+                    <p>{{ reply.createdAt }}</p>
+                </div>
+            </div>
+            <div class="comment-right-top-reply">
+                <button type="button">Reply</button>
+            </div>
+        </div>
+        <div class="comment-right-content">
+            <p>{{ reply.content }}</p>
+        </div>
+    </div>
+</div>

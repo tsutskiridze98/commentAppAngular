@@ -1,0 +1,19 @@
+.section {
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    padding: 3rem 0;
+
+    background-color: var(--very-light-gray);
+
+    &-comments {
+        width: 50%;
+        max-width: 700px;
+        height: 100%;
+        margin: 0 auto;
+
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+}

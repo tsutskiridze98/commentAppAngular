@@ -1,0 +1,39 @@
+<div class="com-div" >
+    <div class="comment" *ngFor="let comment of comments">
+        <div class="comment-left">
+            <div class="comment-left-review">
+                <button><img src="/assets/images/icon-plus.svg" alt="plus"></button>
+                <p>{{ comment.score }}</p>
+                <button><img src="/assets/images/icon-minus.svg" alt="minus"></button>
+            </div>
+        </div>
+        <div class="comment-right">
+            <div class="comment-right-top">
+                <div class="comment-right-top-user">
+                    <div class="comment-user-img">
+                        <img src="assets/{{comment.user.image.png}}" alt="User Avatar">
+                    </div>
+                    <div class="comment-username">
+                        <p>{{ comment.user.username }}</p>
+                    </div>
+                    <div class="comment-date">
+                        <p>{{ comment.createdAt }}</p>
+                    </div>
+                </div>
+                <div class="comment-right-top-reply">
+                    <button type="button">Reply</button>
+                </div>
+            </div>
+            <div class="comment-right-content">
+                <p>{{ comment.content }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="for-reply">
+        <div class="line"></div>
+        <app-reply></app-reply>
+    </div>
+</div>
+
+
+<app-comment-create submitLabel="Write"></app-comment-create>

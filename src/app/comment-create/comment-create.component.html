@@ -1,0 +1,12 @@
+<div class="comment-create">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="comment-create-form">
+        <div class="comment-create-form-img">
+            <img src="" alt="Current User Avatar">
+        </div>
+        <textarea class="comment-create-form-textarea" formControlName="content" row="3" placeholder="Add a comment..."></textarea>
+        <div class="comment-create-form-btn">
+            <button type="submit" [disabled]="form.invalid">SEND</button>
+        </div>
+    </form>
+    
+</div>
